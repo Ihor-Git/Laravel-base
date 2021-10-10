@@ -9,6 +9,9 @@ class PostController extends Controller
 {
     public function index() {
         $posts = Post::all();
-        dd($posts);
+        foreach ($posts as $post) {
+            dump($post->title);
+        }
+        dd('end');
     }
 }
